@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import NavBar from "./components/NavBar"
 import friends from "./friends.json";
 
 class App extends Component {
@@ -21,7 +22,8 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Friends List</Title>
+        <NavBar/>
+        {/* <Title>Friends List</Title> */}
         {this.state.friends.map(friend => (
           <FriendCard
             removeFriend={this.removeFriend}
