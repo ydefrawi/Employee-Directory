@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import Table from "./components/Table";
 import NavBar from "./components/NavBar"
+import TableBody from "./components/TableBody";
+import TableHeader from "./components/TableHeader";
 import friends from "./friends.json";
 
 class App extends Component {
@@ -24,7 +25,9 @@ class App extends Component {
     return (
       <Wrapper>
         <NavBar/>
-        <Table/>
+        <TableHeader>
+       <TableBody/>
+        </TableHeader>
         {/* <Title>Friends List</Title> */}
         {this.state.friends.map(friend => (
           <FriendCard
