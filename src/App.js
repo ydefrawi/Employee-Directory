@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import FriendCard from "./components/FriendCard";
+// import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
+// import Title from "./components/Title";
 import NavBar from "./components/NavBar"
 import TableBody from "./components/TableBody";
 import TableHeader from "./components/TableHeader";
@@ -12,6 +12,29 @@ class App extends Component {
   state = {
     friends
   };
+
+  logState = (state) => {
+    return console.log(state)
+  }
+
+  randBoolean = () =>{
+    let randomBoolean = Math.random() < 0.5;
+    return randomBoolean
+  }
+
+  onSort(event, sortKey) {
+    let randomBoolean = Math.random() < 0.5;
+    let randBool=randomBoolean;
+    const friends = this.state.friends;
+    //ascending
+    if(randomBoolean){friends.sort((a,b) => b[sortKey].localeCompare(a[sortKey]))
+    } else {friends.sort((a,b) => a[sortKey].localeCompare(b[sortKey]))
+    }
+    randBool = !randomBoolean
+    //descending
+    this.setState({ friends })
+  }
+
 
   removeFriend = id => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
@@ -24,18 +47,24 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <NavBar/>
+        <NavBar />
         <TableHeader>
-        {this.state.friends.map(friend => (
-       <TableBody
-      id={friend.id}
-      key={friend.id}
-      name={friend.name}
-      image={friend.image}
-      occupation={friend.occupation}
-      location={friend.location}
-       />
-       ))}
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col" onClick={e => this.onSort(e, 'name')}>Name</th>
+            <th scope="col" onClick={e => this.onSort(e, 'name')}>Occupation</th>
+            <th scope="col">Location</th>
+          </tr>
+          {this.state.friends.map(friend => (
+            <TableBody
+              id={friend.id}
+              key={friend.id}
+              name={friend.name}
+              image={friend.image}
+              occupation={friend.occupation}
+              location={friend.location}
+            />
+          ))}
         </TableHeader>
         {/* <Title>Friends List</Title> */}
         {/* {this.state.friends.map(friend => (
