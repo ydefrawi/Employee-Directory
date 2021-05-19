@@ -6,6 +6,7 @@ function TableBody (props) {
     return (
     <tr>
       <th scope="row">{props.id}</th>
+      <td><img height = " 30px" src={props.image} alt={props.name} /></td>
       <td>{props.name}</td>
       <td>{props.occupation}</td>
       <td>{props.location}</td>
