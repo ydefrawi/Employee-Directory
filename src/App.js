@@ -26,10 +26,19 @@ class App extends Component {
       <Wrapper>
         <NavBar/>
         <TableHeader>
-       <TableBody/>
+        {this.state.friends.map(friend => (
+       <TableBody
+      id={friend.id}
+      key={friend.id}
+      name={friend.name}
+      image={friend.image}
+      occupation={friend.occupation}
+      location={friend.location}
+       />
+       ))}
         </TableHeader>
         {/* <Title>Friends List</Title> */}
-        {this.state.friends.map(friend => (
+        {/* {this.state.friends.map(friend => (
           <FriendCard
             removeFriend={this.removeFriend}
             id={friend.id}
@@ -39,7 +48,7 @@ class App extends Component {
             occupation={friend.occupation}
             location={friend.location}
           />
-        ))}
+        ))} */}
       </Wrapper>
     );
   }
