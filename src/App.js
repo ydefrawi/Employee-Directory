@@ -6,6 +6,12 @@ import NavBar from "./components/NavBar"
 import TableBody from "./components/TableBody";
 import TableHeader from "./components/TableHeader";
 import employees from "./employees.json";
+const picard = require('picard-quotes');
+
+let randomQuote = picard.quote((quote) => {
+  return quote;
+});
+
 // import API from "./utils/API";
 
 let sortArrow="bi bi-caret-down";
@@ -14,6 +20,7 @@ class App extends Component {
     employees,
     sortArrow,
     searchField:"",
+    quote:randomQuote.quote
   };
 
 
@@ -21,7 +28,9 @@ class App extends Component {
     return console.log(state)
   }
 
-
+  setQuote=(randomQuote)=>{
+    this.setState(randomQuote)
+  }
   // apiCall = () =>{
   //   API.search
   //   .then(res => (res.data))
@@ -40,12 +49,12 @@ class App extends Component {
     if(randBool){
       employees.sort((a,b) => b[sortKey].localeCompare(a[sortKey]))
       sortArrow="bi bi-caret-up";
+      //descending
     } else {
       employees.sort((a,b) => a[sortKey].localeCompare(b[sortKey]))
       sortArrow="bi bi-caret-down";
     }
     randBool = !randomBoolean
-    //descending
     this.setState({ employees, sortArrow })
   }
 
@@ -59,13 +68,6 @@ class App extends Component {
   //   return filteredEmployees;
   // }
 
-  removeFriend = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const employees = this.state.employees.filter(friend => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
-    this.setState({ employees });
-  };
-
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     const {employees, searchField}=this.state;
@@ -77,6 +79,7 @@ class App extends Component {
     ));
     return (
       <Wrapper>
+        {/* {this.setQuote()} */}
         <Title/>
         {/* {this.apiCall()} */}
         <NavBar 
