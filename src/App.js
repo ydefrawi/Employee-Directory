@@ -16,6 +16,9 @@ class App extends Component {
     quote:"Engage!"
   };
 
+//Sorts columns alphabetically.
+//toggles between ascending and descending. 
+//Called with an onClick
   onSort(event, sortKey) {
     let randomBoolean = Math.random() < 0.5;
     let randBool=randomBoolean;
@@ -33,9 +36,10 @@ class App extends Component {
     this.setState({ employees, sortArrow })
   }
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+
   render() {
     const {employees, searchField}=this.state;
+  // filters employees array to only include employees that match the searchField value
     const filteredEmployees = employees.filter((item)=>(
       item.name.toLowerCase().includes(searchField.toLowerCase()) || 
       item.occupation.toLowerCase().includes(searchField.toLowerCase()) ||
@@ -45,9 +49,9 @@ class App extends Component {
     return (
       <Wrapper>
         <Title/>
-        <NavBar 
-        handleChange={(e)=>this.setState({searchField: e.target.value})} 
-        />
+    
+        <NavBar handleChange={(e)=>this.setState({searchField: e.target.value})}/>
+
         <TableHeader>
           <tr>
             <th scope="col">#</th>
@@ -57,6 +61,8 @@ class App extends Component {
             <th scope="col" onClick={e => this.onSort(e, 'location')}><button className="button btn">Location<i className={this.state.sortArrow}></i></button></th>
             <th scope="col" onClick={e => this.onSort(e, 'email')}><button className="button btn">Email<i className={this.state.sortArrow}></i></button></th>
           </tr>
+
+ {/* Renders all employees that match the search input by mapping through filteredEmployees */}
           {filteredEmployees.map((employee) => (
             <TableBody
             key={employee.id}
