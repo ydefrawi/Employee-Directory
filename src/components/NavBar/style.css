@@ -1,5 +1,6 @@
 .nav {
     padding:10px;
+    vertical-align:middle;
     width: 100%;
     text-align: center;
     font-size: 3rem;
@@ -44,4 +45,19 @@
 @-ms-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
+}
+
+@media (max-width: 600px) {
+  #searchBox{
+    height: 40px;
+    width: 300px;
+  }
+
+  #navText{
+    visibility: hidden;
+  }
+
+  .nav{
+    height:60px;
+  }
 }
