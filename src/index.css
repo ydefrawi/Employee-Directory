@@ -9,11 +9,6 @@ html, body, #root {
   height: 100%;
 }
 
-.button{
-  border-style: none;
-  font-weight: bold;
-  text-decoration: underline;
-}
 
 /* .button:active{
   border-style: none;

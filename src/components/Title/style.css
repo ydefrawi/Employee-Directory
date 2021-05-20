@@ -2,7 +2,60 @@
   width: 100%;
   text-align: center;
   font-size: 3rem;
-  text-decoration: underline;
-  color: #2A77AE;
+  color: #b4ddf5;
   margin-bottom: 50px;
+}
+
+#picard{
+  text-align: right;
+  color:#b8def0;
+}
+
+#picardQuote{
+  text-align: center;
+  color:#ffffff;
+}
+
+.hero{
+  background-image: url("https://images.unsplash.com/photo-1475139441338-693e7dbe20b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+.emblem{
+  width: 100px;
+  height:100px;
+}
+
+.fade-in-image {
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }

@@ -1,87 +1,146 @@
 [
   {
     "id": 1,
-    "name": "SpongeBob",
-    "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
-    "occupation": "Fry Cook",
-    "phone": "(555)-555-4545",
-    "location": "A Pineapple Under the Sea"
+    "name": "Picard, Jean-Luc ",
+    "image": "https://www.startrek.com/sites/default/files/styles/content_full/public/images/2019-07/ae5e3ce40e0404a45ecacaaf05e5f735.jpg?itok=avkMQeu-",
+    "occupation": "Captain",
+    "location": "USS Enterprise",
+    "email":"make-it-so@gmail.com"
   },
   {
     "id": 2,
-    "name": "Mr. Krabs",
-    "image": "https://vignette3.wikia.nocookie.net/vsbattles/images/8/80/Mr._Krabs.png/revision/latest?cb=20150919162131",
-    "occupation": "Restaurant Owner",
-    "location": "A Giant Anchor"
+    "name": "Riker, William T. ",
+    "image": "https://www.hobbydb.com/processed_uploads/subject_photo/subject_photo/image/21641/1487614008-14516-0164/Commander_20Riker_large.jpg",
+    "occupation": "First Officer",
+    "location": "USS Enterprise",
+    "email":"chicksDigBeards@gmail.com"
+
   },
   {
     "id": 3,
-    "name": "Squidward",
-    "image": "https://vignette2.wikia.nocookie.net/fictionalcharacters/images/a/ac/Squidward.png/revision/latest?cb=20131121012626",
-    "occupation": "Cashier",
-    "location": "An Easter Island Head"
+    "name": "LaForge, Geordi",
+    "image": "https://64.media.tumblr.com/f30275ac2133810b125852cab3fa693b/tumblr_inline_pb1wnaUB1S1v7r6oh_1280.jpg",
+    "occupation": "Chief Engineer",
+    "location": "USS Enterprise",
+    "email":"whoneedsraybans@gmail.com"
+
   },
   {
     "id": 4,
-    "name": "Dexter",
-    "image": "https://s-media-cache-ak0.pinimg.com/originals/fe/32/49/fe32495d45283cd6860ae122f0aeaad9.png",
-    "occupation": "Boy Genius",
-    "location": "A Secret Laboratory"
+    "name": "Data",
+    "image": "https://www.startrek.com/sites/default/files/styles/content_full/public/images/2019-07/5705e1164a8394aace6018e27d20d237.jpg?itok=scntSBpz",
+    "occupation": "Second Officer",
+    "location": "USS Enterprise",
+    "email":"beepbeepboop@gmail.com"
+
   },
   {
     "id": 5,
-    "name": "Courage",
-    "image": "https://vignette4.wikia.nocookie.net/vsbattles/images/3/39/Courage-0.png/revision/latest?cb=20160719055423",
-    "occupation": "A Cowardly Dog",
-    "location": "Nowhere, Kansas"
+    "name": "Sisko, Benjamin ",
+    "image": "https://images.squarespace-cdn.com/content/v1/571ab93fc6fc0857af8d171b/1502562589360-20JRHKN4BKE006WHTFBF/ke17ZwdGBToddI8pDm48kDI2JC39n6Y7IUm4pvbWBaR7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UXtTqJ4gip5fqTFjTpsbYpWg_kEqkdWnDOh7J0Y7zDUKDvtOaQvUmOs9sePYL10mlQ/79bf5111d1a72a42381a7b5f17b3e7831fde432848cff05a7601391887acd37e.jpg",
+    "occupation": "Commanding Officer",
+    "location": "Deep Space Nine",
+    "email":"eatitdominion@gmail.com"
+
+  
   },
   {
     "id": 6,
-    "name": "Doug Funnie",
-    "image": "https://vignette1.wikia.nocookie.net/doug/images/3/3b/Doug001.gif/revision/latest?cb=20110807170511",
-    "occupation": "Student",
-    "location": "Bluffington"
+    "name": "Dax, Jadzia",
+    "image": "https://www.trekkiefeminist.com/wp-content/uploads/2018/12/56616276131_0.jpg",
+    "occupation": "Chief Science Officer",
+    "location": "Deep Space Nine",
+    "email":"9lives@gmail.com"
+
   },
   {
     "id": 7,
-    "name": "Bugs Bunny",
-    "image": "https://vignette2.wikia.nocookie.net/deathbattlefanon/images/2/2b/Bugs_Bunny.png/revision/latest?cb=20151206010607",
-    "occupation": "Looney Toon",
-    "location": "A Rabbit Burrow"
+    "name": "Quark",
+    "image": "https://lh3.googleusercontent.com/proxy/nIU-38zX22I9MCs4Qy5AlXe8tX5RqIMCueJ0C2VF6bcQsh2P0qdX042-zrSSsssfR1Aew5DRj3Hf2GKlYSI8f4B_KI-WJj_Hjl2ek7rZisAzwQ",
+    "occupation": "Bar/Restaurant Owner",
+    "location": "Deep Space Nine",
+    "email":"rulesofacquisitionrule@gmail.com"
+
   },
   {
     "id": 8,
-    "name": "Johnny Bravo",
-    "image": "http://vignette3.wikia.nocookie.net/p__/images/9/9a/Johnny_Bravo.png/revision/latest?cb=20131031233339&path-prefix=protagonist",
-    "occupation": "Ladies Man",
-    "location": "Aron City"
+    "name": "O'Brien, Miles",
+    "image": "data:image/jpeg;base64,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",
+    "occupation": "Chief Engineer",
+    "location": "Deep Space Nine",
+    "email":"ihatesushi@gmail.com"
+
   },
   {
     "id": 9,
-    "name": "Tommy Pickles",
-    "image": "https://vignette4.wikia.nocookie.net/uncyclopedia/images/e/e4/Tommy_Pickles.png/revision/latest?cb=20110530102641",
-    "occupation": "Adventurer",
-    "location": "California"
+    "name": "Janeway, Kathryn",
+    "image": "https://i.pinimg.com/736x/02/72/2d/02722d544a8e23f76b59ac449a60b95f.jpg",
+    "occupation": "Captain",
+    "location": "USS Voyager",
+    "email":"do-it@gmail.com"
+
   },
   {
     "id": 10,
-    "name": "Rocko",
-    "image": "http://vignette3.wikia.nocookie.net/rockosmodernlife/images/9/9e/Rockos-modern-life-4e582a8f06a41.png/revision/latest?cb=20130522173416",
-    "occupation": "Cashier",
-    "location": "O-Town, California"
+    "name": "Seven of Nine",
+    "image": "https://66.media.tumblr.com/a165aa99bb28c7585139838b7347d4f7/tumblr_onv1h52pii1w8hpj6o5_500.jpg",
+    "occupation": "Science Officer",
+    "location": "USS Voyager",
+    "email":"ihatecorsets@gmail.com"
+
   },
   {
     "id": 11,
-    "name": "Captain Planet",
-    "image": "http://vignette2.wikia.nocookie.net/dragon-rap-battles/images/b/b6/Captain_Planet.png/revision/latest?cb=20160911200836",
-    "occupation": "Superhero",
-    "location": "Earth"
+    "name": "Doctor, The",
+    "image": "https://tvseriesfinale.com/wp-content/uploads/2018/03/robert-picardo-star-trek.jpg",
+    "occupation": "Chief Medical Officer",
+    "location": "USS Voyager",
+    "email":"saymyname@gmail.com"
+
   },
   {
     "id": 12,
-    "name": "Ickis",
-    "image": "http://static.tvtropes.org/pmwiki/pub/images/ickis.png",
-    "occupation": "Ahhhh! A Real Monster!",
-    "location": "Under a City Dump"
+    "name": "Neelix",
+    "image": "https://imagez.tmz.com/image/2f/4by3/2019/08/13/2fe6ce60df6843758e203c001efbf885_md.jpg",
+    "occupation": "Morale Officer",
+    "location": "USS Voyager",
+    "email":"nobodylikesme@gmail.com"
+    
+  },
+  {
+    "id": 13,
+    "name": "Chakotay",
+    "image": "https://static.wikia.nocookie.net/startrek/images/b/b6/Chakotay%2C_2377.jpg",
+    "occupation": "First Officer",
+    "location": "USS Voyager",
+    "email":"heyuahheyuah@gmail.com"
+    
+  },
+  {
+    "id": 14,
+    "name": "Tuvok",
+    "image": "https://4.bp.blogspot.com/-xUil54ssD4E/Wa_Ech4pXtI/AAAAAAAAMa4/QLbFlM6XXRcfphgyvlfr-DN7MlEWNv8jgCLcBGAs/s1600/tuvok_llap.JPG",
+    "occupation": "Second Officer",
+    "location": "USS Voyager",
+    "email":"iheartneelix@gmail.com"
+    
+  },
+  {
+    "id": 15,
+    "name": "Deanna Troi",
+    "image": "https://i.imgur.com/TgxcHqb.jpg",
+    "occupation": "Counselor",
+    "location": "USS Enterprise",
+    "email":"literallyneverhelpful@gmail.com"
+    
+  },
+  {
+    "id": 16,
+    "name": "Worf",
+    "image": "https://www.startrek.com/sites/default/files/styles/content_full/public/images/2019-07/ffeed84c7cb1ae7bf4ec4bd78275bb98.jpg?itok=ZJZO3Sm3",
+    "occupation": "Chief Security Officer",
+    "location": "USS Enterprise",
+    "email":"warwarbattlebattle@gmail.com"
+    
   }
 ]

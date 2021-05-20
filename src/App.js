@@ -7,8 +7,8 @@ import TableBody from "./components/TableBody";
 import TableHeader from "./components/TableHeader";
 import employees from "./employees.json";
 // import API from "./utils/API";
+
 let sortArrow="bi bi-caret-down";
-// let filteredEmployees=[];
 class App extends Component {
   state = {
     employees,
@@ -70,7 +70,10 @@ class App extends Component {
   render() {
     const {employees, searchField}=this.state;
     const filteredEmployees = employees.filter((item)=>(
-      item.name.toLowerCase().includes(searchField.toLowerCase())
+      item.name.toLowerCase().includes(searchField.toLowerCase()) || 
+      item.occupation.toLowerCase().includes(searchField.toLowerCase()) ||
+      item.location.toLowerCase().includes(searchField.toLowerCase()) ||
+      item.email.toLowerCase().includes(searchField.toLowerCase())
     ));
     return (
       <Wrapper>
@@ -84,8 +87,8 @@ class App extends Component {
             <th scope="col" >Image</th>
             <th scope="col" onClick={e => this.onSort(e, 'name')}><button className="button btn">Name<i className={this.state.sortArrow}></i></button></th>
             <th scope="col" onClick={e => this.onSort(e, 'occupation')}><button className="button btn">Occupation<i className={this.state.sortArrow}></i></button></th>
-            <th scope="col">Location</th>
-            <th scope="col">Phone</th>
+            <th scope="col" onClick={e => this.onSort(e, 'location')}><button className="button btn">Location<i className={this.state.sortArrow}></i></button></th>
+            <th scope="col" onClick={e => this.onSort(e, 'email')}><button className="button btn">Email<i className={this.state.sortArrow}></i></button></th>
           </tr>
           {filteredEmployees.map((employee) => (
             <TableBody
@@ -95,7 +98,7 @@ class App extends Component {
               image={employee.image}
               occupation={employee.occupation}
               location={employee.location}
-              phone={employee.phone}
+              email={employee.email}
             />
           ))}
         </TableHeader>

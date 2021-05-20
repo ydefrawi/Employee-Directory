@@ -3,7 +3,7 @@ import "./style.css";
 
 function TableHeader (props) {
     return (
-        <table className="table">
+        <table className="table table-hover">
             <thead>
             </thead>
             <tbody>
