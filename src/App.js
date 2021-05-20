@@ -1,22 +1,21 @@
 import React, { Component } from "react";
 // import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
-// import Title from "./components/Title";
+import Title from "./components/Title";
 import NavBar from "./components/NavBar"
 import TableBody from "./components/TableBody";
 import TableHeader from "./components/TableHeader";
 import employees from "./employees.json";
 // import API from "./utils/API";
 let sortArrow="bi bi-caret-down";
-
+// let filteredEmployees=[];
 class App extends Component {
-  // Setting this.state.friends to the friends json array
   state = {
     employees,
-    sortArrow
+    sortArrow,
+    searchField:"",
   };
 
-  data; 
 
   logState = (state) => {
     return console.log(state)
@@ -50,6 +49,15 @@ class App extends Component {
     this.setState({ employees, sortArrow })
   }
 
+  // searchHandler=(string)=>{
+  //   const employees=this.state;
+  //   const searchField=this.state;
+  //   const filteredEmployees = employees.filter(item=>(
+  //     item.name.toLowerCase().includes(searchField.toLowerCase())
+  //   ))
+  //   console.log(employees)
+  //   return filteredEmployees;
+  // }
 
   removeFriend = id => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
@@ -60,10 +68,16 @@ class App extends Component {
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
+    const {employees, searchField}=this.state;
+    const filteredEmployees = employees.filter((item)=>(
+      item.name.toLowerCase().includes(searchField.toLowerCase())
+    ));
     return (
       <Wrapper>
+        <Title/>
         {/* {this.apiCall()} */}
-        <NavBar />
+        <NavBar 
+        handleChange={(e)=>this.setState({searchField: e.target.value})} />
         <TableHeader>
           <tr>
             <th scope="col">#</th>
@@ -73,7 +87,7 @@ class App extends Component {
             <th scope="col">Location</th>
             <th scope="col">Phone</th>
           </tr>
-          {this.state.employees.map(employee => (
+          {filteredEmployees.map((employee) => (
             <TableBody
               key={employee.id}
               id={employee.id}
