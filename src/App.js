@@ -6,33 +6,48 @@ import NavBar from "./components/NavBar"
 import TableBody from "./components/TableBody";
 import TableHeader from "./components/TableHeader";
 import employees from "./employees.json";
+// import API from "./utils/API";
+let sortArrow="bi bi-caret-down";
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    employees
+    employees,
+    sortArrow
   };
+
+  data; 
 
   logState = (state) => {
     return console.log(state)
   }
 
-  randBoolean = () =>{
-    let randomBoolean = Math.random() < 0.5;
-    return randomBoolean
-  }
+
+  // apiCall = () =>{
+  //   API.search
+  //   .then(res => (res.data))
+  //   .catch(err => console.log(err));
+  // }
+  // randBoolean = () =>{
+  //   let randomBoolean = Math.random() < 0.5;
+  //   return randomBoolean
+  // }
 
   onSort(event, sortKey) {
     let randomBoolean = Math.random() < 0.5;
     let randBool=randomBoolean;
     const employees = this.state.employees;
     //ascending
-    if(randomBoolean){employees.sort((a,b) => b[sortKey].localeCompare(a[sortKey]))
-    } else {employees.sort((a,b) => a[sortKey].localeCompare(b[sortKey]))
+    if(randBool){
+      employees.sort((a,b) => b[sortKey].localeCompare(a[sortKey]))
+      sortArrow="bi bi-caret-up";
+    } else {
+      employees.sort((a,b) => a[sortKey].localeCompare(b[sortKey]))
+      sortArrow="bi bi-caret-down";
     }
     randBool = !randomBoolean
     //descending
-    this.setState({ employees })
+    this.setState({ employees, sortArrow })
   }
 
 
@@ -47,23 +62,26 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
+        {/* {this.apiCall()} */}
         <NavBar />
         <TableHeader>
           <tr>
             <th scope="col">#</th>
             <th scope="col" >Image</th>
-            <th scope="col" onClick={e => this.onSort(e, 'name')}>Name</th>
-            <th scope="col" onClick={e => this.onSort(e, 'occupation')}>Occupation</th>
+            <th scope="col" onClick={e => this.onSort(e, 'name')}><button className="button btn">Name<i className={this.state.sortArrow}></i></button></th>
+            <th scope="col" onClick={e => this.onSort(e, 'occupation')}><button className="button btn">Occupation<i className={this.state.sortArrow}></i></button></th>
             <th scope="col">Location</th>
+            <th scope="col">Phone</th>
           </tr>
           {this.state.employees.map(employee => (
             <TableBody
-              id={employee.id}
               key={employee.id}
+              id={employee.id}
               name={employee.name}
               image={employee.image}
               occupation={employee.occupation}
               location={employee.location}
+              phone={employee.phone}
             />
           ))}
         </TableHeader>
