@@ -1,18 +1,11 @@
 import React, { Component } from "react";
-// import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import NavBar from "./components/NavBar"
 import TableBody from "./components/TableBody";
 import TableHeader from "./components/TableHeader";
 import employees from "./employees.json";
-const picard = require('picard-quotes');
 
-let randomQuote = picard.quote((quote) => {
-  return quote;
-});
-
-// import API from "./utils/API";
 
 let sortArrow="bi bi-caret-down";
 class App extends Component {
@@ -22,24 +15,6 @@ class App extends Component {
     searchField:"",
     quote:"Engage!"
   };
-
-
-  logState = (state) => {
-    return console.log(state)
-  }
-
-  setQuote=(randomQuote)=>{
-    this.setState(randomQuote)
-  }
-  // apiCall = () =>{
-  //   API.search
-  //   .then(res => (res.data))
-  //   .catch(err => console.log(err));
-  // }
-  // randBoolean = () =>{
-  //   let randomBoolean = Math.random() < 0.5;
-  //   return randomBoolean
-  // }
 
   onSort(event, sortKey) {
     let randomBoolean = Math.random() < 0.5;
@@ -58,16 +33,6 @@ class App extends Component {
     this.setState({ employees, sortArrow })
   }
 
-  // searchHandler=(string)=>{
-  //   const employees=this.state;
-  //   const searchField=this.state;
-  //   const filteredEmployees = employees.filter(item=>(
-  //     item.name.toLowerCase().includes(searchField.toLowerCase())
-  //   ))
-  //   console.log(employees)
-  //   return filteredEmployees;
-  // }
-
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     const {employees, searchField}=this.state;
@@ -79,11 +44,10 @@ class App extends Component {
     ));
     return (
       <Wrapper>
-        {/* {this.setQuote()} */}
         <Title/>
-        {/* {this.apiCall()} */}
         <NavBar 
-        handleChange={(e)=>this.setState({searchField: e.target.value})} />
+        handleChange={(e)=>this.setState({searchField: e.target.value})} 
+        />
         <TableHeader>
           <tr>
             <th scope="col">#</th>
@@ -95,28 +59,16 @@ class App extends Component {
           </tr>
           {filteredEmployees.map((employee) => (
             <TableBody
-              key={employee.id}
-              id={employee.id}
-              name={employee.name}
-              image={employee.image}
-              occupation={employee.occupation}
-              location={employee.location}
-              email={employee.email}
+            key={employee.id}
+            id={employee.id}
+            name={employee.name}
+            image={employee.image}
+            occupation={employee.occupation}
+            location={employee.location}
+            email={employee.email}
             />
-          ))}
+            ))}
         </TableHeader>
-        {/* <Title>Friends List</Title> */}
-        {/* {this.state.friends.map(friend => (
-          <FriendCard
-            removeFriend={this.removeFriend}
-            id={friend.id}
-            key={friend.id}
-            name={friend.name}
-            image={friend.image}
-            occupation={friend.occupation}
-            location={friend.location}
-          />
-        ))} */}
       </Wrapper>
     );
   }

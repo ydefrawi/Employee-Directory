@@ -7,10 +7,10 @@
   }
 
 .table {
-    background: #b6e6ee;
+    background: #dff7fb;
     animation: fadebackground 6s;
   }
   @keyframes fadebackground {
     from {background-color: #ffffff;}
-    to {background-color: #c9eff6;}
+    to {background-color: #e6f8fb;}
   }
