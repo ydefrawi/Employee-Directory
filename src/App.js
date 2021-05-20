@@ -20,7 +20,7 @@ class App extends Component {
     employees,
     sortArrow,
     searchField:"",
-    quote:randomQuote.quote
+    quote:"Engage!"
   };
 
 
