@@ -33,9 +33,9 @@
 }
 
 .hero{
+  padding-top:30px;
   background-image: url("https://github.com/ydefrawi/Employee-Directory/blob/main/images/OuterSpace.jpg?raw=true");
   background-position: bottom;
-  background-attachment: fixed;
   background-size: cover;
   height:400px;
   width: 100%;

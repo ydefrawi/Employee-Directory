@@ -12,8 +12,9 @@
 }
 
 #navText{
+  margin-left: 10px;
   font-size:1rem;
-  width:100%;
+  width:180%;
   vertical-align:bottom;
   color:aliceblue;
 }

@@ -7,7 +7,7 @@ function NavBar(props) {
         <div className="container-fluid">
           <div className="d-flex">
             <input id="searchBox" className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={props.handleChange} />
-            <div id="navText">Search by Name, Occupation, Location or Email!</div>
+            <div id="navText">Filter by Name, Occupation, Location or Email!</div>
           </div>
         </div>
       </nav>
