@@ -1,16 +1,28 @@
 
 .button{
+    color:#ffffff;
     border-style: none;
     font-weight: bold;
     text-decoration: underline;
     background-color:transparent;
   }
+td,th, a{
+  color:#ffffff;
 
+}
 .table {
-    background: #dff7fb;
-    animation: fadebackground 6s;
+    background: #090c2e;
+    animation: fadebackground 4s;
   }
   @keyframes fadebackground {
-    from {background-color: #ffffff;}
-    to {background-color: #e6f8fb;}
+    from {background-color: #274677;}
+    to {background-color: #090c2e;}
   }
+
+  @media (max-width: 600px) {
+
+  
+   th, .button{
+      font-size:small;
+    }
+  }  

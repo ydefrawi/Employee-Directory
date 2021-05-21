@@ -1,9 +1,11 @@
 .title {
+  font-family: 'KoHo', sans-serif;
   width: 100%;
+  height:100px;
   text-align: center;
-  font-size: 3rem;
-  color: #b4ddf5;
-  margin-bottom: 50px;
+  font-size: 4rem;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .box {
@@ -15,19 +17,27 @@
 }
 
 #picard{
-  text-align: right;
+  font-family: 'Kodchasan', sans-serif;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  text-align: center;
   color:#b8def0;
 }
 
 #picardQuote{
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 1.4rem;
+
   text-align: center;
   color:#ffffff;
 }
 
 .hero{
-  background-image: url("https://images.unsplash.com/photo-1475139441338-693e7dbe20b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
-  background-position: center;
+  background-image: url("https://github.com/ydefrawi/Employee-Directory/blob/main/images/OuterSpace.jpg?raw=true");
+  background-position: bottom;
+  background-attachment: fixed;
   background-size: cover;
+  height:400px;
   width: 100%;
 }
 
@@ -66,4 +76,31 @@
 @-ms-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
+}
+
+@media (max-width: 700px) {
+  .title{
+    font-size:50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .title{
+    font-size:40px;
+  }
+
+  #picard{
+    font-size: 15px;
+  }
+  #picardQuote{
+    font-size: 15px;
+  }
+
+  #navText{
+    visibility: hidden;
+  }
+
+  .nav{
+    height:60px;
+  }
 }
