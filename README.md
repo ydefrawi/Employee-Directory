@@ -15,4 +15,4 @@ This employee directory uses React to render employee columns in real time as th
 
 Can sort columns alphabetically by clicking header items (Name, Occupation, Location, and Email.)
 
-[Deployed-Heroku-App]("https://star-trek-directory.herokuapp.com/)
+[Deployed-Heroku-App](https://star-trek-directory.herokuapp.com/)
