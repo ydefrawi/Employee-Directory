@@ -1,7 +1,6 @@
 .title {
   font-family: 'KoHo', sans-serif;
   width: 100%;
-  height:100px;
   text-align: center;
   font-size: 4rem;
   color: #ffffff;
@@ -35,8 +34,8 @@
 .hero{
   padding-top:30px;
   background-image: url("https://github.com/ydefrawi/Employee-Directory/blob/main/images/eclipse.jpg?raw=true");
-  background-position: bottom;
-  background-size: cover;
+  background-position:bottom;
+  background-size:cover;
   height:400px;
   width: 100%;
 }
