@@ -39,7 +39,7 @@ function Title() {
   return (
     <div className="hero fade-in-image">
       <div className="px-4 py-2 my-2 text-center">
-        <img onClick={() => play(!isPlaying)} className="d-block mx-auto emblem" style={style} src="https://png2.cleanpng.com/sh/b9cb074f6a4e81c7fafe5703ad20f630/L0KzQYm3V8A2N5DokJH0aYP2gLBuTgN1aaMyjORuaz32hLL5hvxmbaUyetNtZ3Wwc7F0jgVvcZRmjNH7LXnxg7bujvEue6Vmip99cnXuPcTqifVva5YyTdQ8ZUHldbPoWMZjPGUzSKU8MkWzQYe4VcMxP2o8SKUANki8SXB3jvc=/kisspng-star-trek-starfleet-badge-communicator-insegna-star-trek-science-5b3e1beba86b44.0332501615307970356899.png" alt="" width="72" height="57" />
+        <img onClick={() => play(!isPlaying)} className="d-block mx-auto emblem" style={style} src="https://png2.cleanpng.com/sh/ba73c7ea284cd7a742a250aa39b20e28/L0KzQYm4UMI2N5Doh5H0aYP2gLBuTfxwb5CyiAZqcj33grbyTgN1aaNrhNdudD3mf770gf5lNZZyet5ubT32hLL5hvxmbaUye9H2bXHxdH65UsUue155gNc2c4Tkgn77kvVsNZVqi9twbj3zgrE0VfJlOZU5Uac8YUnkdoi1U8MxOGU7UKQ6NUSzRIiBUcAyOmU1SZD5bne=/kisspng-logo-star-trek-starfleet-command-emblem-starfleet-command-225-s-the-star-trek-design-pro-5bd1d4953a9af7.3300468215404781012401.png" alt="" />
 
         <Animate
           play start = {{

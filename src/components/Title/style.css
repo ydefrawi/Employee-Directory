@@ -34,7 +34,7 @@
 
 .hero{
   padding-top:30px;
-  background-image: url("https://github.com/ydefrawi/Employee-Directory/blob/main/images/OuterSpace.jpg?raw=true");
+  background-image: url("https://github.com/ydefrawi/Employee-Directory/blob/main/images/eclipse.jpg?raw=true");
   background-position: bottom;
   background-size: cover;
   height:400px;
@@ -42,8 +42,8 @@
 }
 
 .emblem{
-  width: 100px;
-  height:100px;
+  width: 180px;
+  height:120px;
 }
 
 .fade-in-image {
